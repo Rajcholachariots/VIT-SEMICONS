@@ -70,7 +70,20 @@ const Navbar = () => {
                         to="about"
                         className="z-0 cursor-pointer"
                       >
-                        About
+                        About Us
+                      </Link>
+                    </div>
+                    <div
+                      className={`flex relative flex-col whitespace-nowrap 
+
+                      `}
+                    >
+                      <Link
+                        // onClick={() => handleItemClick("Passenger")}
+                        to="Milestones"
+                        className="z-0 cursor-pointer"
+                      >
+                        Milestones
                       </Link>
                     </div>
                     <div className="flex relative flex-col whitespace-nowrap">

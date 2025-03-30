@@ -11,6 +11,7 @@ import ContactUs from '../ContactUs';
 import Footer from '../Footer';
 import Hero from '../Hero';
 import AboutUs from '../AboutUs';
+import Milestones from '../Milestones';
 import OurProduct from '../OurProduct';
 const Main = () => {
   return (
@@ -24,6 +25,7 @@ const Main = () => {
         <Card6 />
         <Card7 />
         <AboutUs />
+        <Milestones/>
         <OurProduct />
         <ContactUs />
         <Footer />
