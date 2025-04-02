@@ -3,9 +3,9 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import milestone1Image from "../../assets/milestone1.svg";
 import milestone2Image from "../../assets/milestone2.svg";
-import milestone1Video from "../../assets/milestone1.mp4";
-import milestone3Video from "../../assets/2.mp4";
-import milestone2Video from "../../assets/1.mp4";
+import milestone1Video from "../../assets/milestone3.mp4";
+import milestone3Video from "../../assets/2.MP4";
+import milestone2Video from "../../assets/1.MP4";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -13,32 +13,32 @@ const milestones = [
   {
     type: "image",
     src: milestone1Image,
-    title: "Some Memorable Moments",
+    title: "Signing Ceremony",
     description: "Signing ceremony with our Honourable Cheif Minister Shri. Devendra Fadnavis, at Davos, Switzerland."
   },
   {
     type: "video",
     src: milestone1Video,
-    title: "Conversations",
+    title: "Signing Ceremony",
     description: "A glimpse Signing ceremony with our Honourable Cheif Minister Shri. Devendra Fadnavis,  at Davos, Switzerland."
   },
   {
     type: "image",
     src: milestone2Image,
-    title: "Signing ceremony",
-    description: "We grew into a team of 100 talented individuals."
+    title: "Signing Ceremony",
+    description: "A glimpse Signing ceremony with our Honourable Cheif Minister Shri. Devendra Fadnavis,  at Davos, Switzerland."
   },
   {
     type: "video",
     src: milestone2Video,
-    title: "Global Recognition",
-    description: "Our work received international awards."
+    title: "Signing Ceremony",
+    description: "A glimpse Signing ceremony with our Honourable Cheif Minister Shri. Devendra Fadnavis,  at Davos, Switzerland."
   },
   {
     type: "video",
     src: milestone3Video,
-    title: "Global Recognition",
-    description: "Our work received international awards."
+    title: "Signing Ceremony",
+    description: "A glimpse Signing ceremony with our Honourable Cheif Minister Shri. Devendra Fadnavis,  at Davos, Switzerland."
   }
 ];
 
@@ -60,19 +60,30 @@ const MilestoneSection = () => {
   const items = milestones.map((milestone, index) => (
     <motion.div
       key={index}
-      className="flex flex-col items-center p-4 w-full"
+      className="flex flex-col items-center p-4 w-full max-w-md mx-auto"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
     >
-      {milestone.type === "image" ? (
-        <img src={milestone.src} alt={milestone.title} className="w-full h-[500px] object-cover rounded-xl shadow-md" />
-      ) : (
-        <video autoPlay muted loop className="w-full h-[500px] object-cover rounded-xl shadow-md">
-          <source src={milestone.src} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      )}
+      <div className="w-full h-[400px] flex items-center justify-center bg-gray-200 dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
+        {milestone.type === "image" ? (
+          <img
+            src={milestone.src}
+            alt={milestone.title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <video
+            autoPlay
+            muted
+            loop
+            className="w-full h-full object-cover"
+          >
+            <source src={milestone.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
+      </div>
       <h3 className="text-2xl font-bold mt-4 text-gray-900 dark:text-white text-center">{milestone.title}</h3>
       <p className="text-md text-gray-600 dark:text-gray-400 mt-2 text-center max-w-md">{milestone.description}</p>
     </motion.div>
@@ -100,7 +111,7 @@ const MilestoneSection = () => {
             ref={carouselRef}
             items={items} 
             autoPlay
-            autoPlayInterval={2000}
+            autoPlayInterval={4000}
             infinite
             controlsStrategy="responsive"
             disableDotsControls
