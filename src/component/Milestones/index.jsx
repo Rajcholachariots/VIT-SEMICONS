@@ -4,7 +4,8 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import milestone1Image from "../../assets/milestone1.svg";
 import milestone2Image from "../../assets/milestone2.svg";
 import milestone1Video from "../../assets/milestone1.mp4";
-import milestone3Video from "../../assets/milestone3.mp4";
+import milestone3Video from "../../assets/2.mp4";
+import milestone2Video from "../../assets/1.mp4";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -24,10 +25,15 @@ const milestones = [
   {
     type: "image",
     src: milestone2Image,
-    title: "Expanded Team",
+    title: "Signing ceremony",
     description: "We grew into a team of 100 talented individuals."
   },
-  
+  {
+    type: "video",
+    src: milestone2Video,
+    title: "Global Recognition",
+    description: "Our work received international awards."
+  },
   {
     type: "video",
     src: milestone3Video,
