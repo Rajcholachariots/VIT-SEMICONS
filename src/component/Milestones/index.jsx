@@ -90,14 +90,14 @@ const MilestoneSection = () => {
   ));
 
   return (
-    <div className="w-full px-4 py-16 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 relative">
+    <div  className="w-full px-4 py-16 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 relative">
       <motion.h2 
         className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-white" 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        Our Milestones
+       <div id="milestone"> Our Milestones </div>
       </motion.h2>
       <p className="text-center text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
         A journey of growth, innovation, and success. Here are some of our most significant milestones.
